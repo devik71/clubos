@@ -1,0 +1,12 @@
+BRUKXT / MEDIA ENGINE — DEMONSTRATION ONLY
+
+Event: BRUKXT / 2025-04-12
+Artist: Artist A (placeholder identity in a simulated event)
+Set: 02:00–03:00 (illustrative)
+Sources: CAM_A, CAM_B, CAM_C, AUDIO_RAW
+Output: MASTER v1 (simulated; no actual media is included)
+Checks: integrity, duration, video signal, audio presence, sync
+Archive: BRUKXT / 2025-04-12 / Artist A
+
+This is a downloadable example of a delivery manifest, not a real artist recording.
+No messages were sent, no files were uploaded and no original media was modified.

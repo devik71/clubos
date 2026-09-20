@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reactive Light — Vision</title>
+<style>
+:root{--bg:#0b0d10;--panel:#12161b;--panel2:#171c22;--text:#eef2f5;--muted:#9aa5b1;--line:#27313a;--accent:#b9ff66;--accent2:#66e3ff;--warn:#ffd166;--r:18px}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+main{max-width:1120px;margin:auto;padding:56px 24px 100px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700}.hero{padding:56px 0 44px;border-bottom:1px solid var(--line)}h1{font-size:clamp(46px,8vw,96px);line-height:.92;letter-spacing:-.055em;margin:16px 0 24px;max-width:900px}.lead{font-size:clamp(19px,2.3vw,27px);max-width:820px;color:#cbd3da}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:8px 12px;margin:8px 7px 0 0;color:var(--muted);font-size:13px}.section{padding:62px 0;border-bottom:1px solid var(--line)}h2{font-size:clamp(30px,4vw,50px);letter-spacing:-.035em;margin:0 0 18px}.intro{font-size:20px;color:#cbd3da;max-width:800px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:30px}.card{grid-column:span 4;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;min-height:190px}.card.wide{grid-column:span 6}.card.full{grid-column:1/-1}.num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.12em}.card h3{font-size:21px;margin:11px 0 8px}.card p{color:var(--muted);margin:0}.flow{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap;margin-top:28px}.node{flex:1 1 145px;background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center;font-weight:650}.arrow{align-self:center;color:var(--accent);font-size:24px}.quote{font-size:clamp(26px,4vw,48px);line-height:1.12;letter-spacing:-.03em;max-width:900px;margin:32px 0;color:#fff}.quote em{color:var(--accent);font-style:normal}.steps{counter-reset:step;display:grid;gap:14px;margin-top:30px}.step{counter-increment:step;display:grid;grid-template-columns:54px 1fr;gap:18px;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.step:before{content:counter(step);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#0b0d10;font-weight:900}.step b{display:block;font-size:18px;margin-bottom:4px}.step span{color:var(--muted)}code,pre{font-family:"SFMono-Regular",Consolas,monospace}.module{font-family:"SFMono-Regular",Consolas,monospace;color:var(--accent2);font-size:14px}.meter{height:8px;background:#242b31;border-radius:999px;margin:10px 0 18px;overflow:hidden}.meter i{display:block;height:100%;background:var(--accent);border-radius:inherit}.footer{padding-top:50px;color:var(--muted);font-size:14px}.accent{color:var(--accent)}
+@media(max-width:760px){main{padding:32px 18px 70px}.hero{padding-top:28px}.card,.card.wide{grid-column:1/-1}.arrow{display:none}.flow{display:grid;grid-template-columns:1fr}.step{grid-template-columns:44px 1fr}}
+@media print{body{background:#fff;color:#111}.card,.node,.step{background:#fff;border-color:#ddd}.lead,.intro,.card p,.step span,.footer{color:#555}.section,.hero{border-color:#ddd}.quote{color:#111}.pill{color:#555;border-color:#ddd}}
+</style>
+</head>
+<body><main>
+<section class="hero">
+<div class="eyebrow">Reactive Light / спільна розробка</div>
+<h1>Світло як<br><span class="accent">живий інструмент.</span></h1>
+<p class="lead">Ми з Ксенією будуємо власний шар між музикою та світловою системою: він аналізує звук у реальному часі й дає художнику набір сигналів, з яких можна конструювати поведінку світла.</p>
+<div><span class="pill">Audio → Data</span><span class="pill">Mapping</span><span class="pill">DMX / Art-Net</span><span class="pill">QLC / MagicQ</span><span class="pill">Human-directed</span></div>
+</section>
+
+<section class="section">
+<div class="eyebrow">01 / Ідея</div><h2>Не sound-to-light. Система поведінки.</h2>
+<p class="intro">Комп'ютер не вирішує, як має виглядати світло. Він лише перетворює музику на зрозумілі керуючі сигнали. Те, як ці сигнали взаємодіють зі сценою, придумує Ксенія.</p>
+<div class="flow"><div class="node">AUDIO</div><div class="arrow">→</div><div class="node">ANALYSIS</div><div class="arrow">→</div><div class="node">PARAMETERS</div><div class="arrow">→</div><div class="node">ARTISTIC LOGIC</div><div class="arrow">→</div><div class="node">ART-NET / DMX</div></div>
+<p class="quote">Ми програмуємо не послідовність сцен, а <em>правила поведінки світла.</em></p>
+</section>
+
+<section class="section">
+<div class="eyebrow">02 / Що пишемо</div><h2>Reactive Light Engine</h2>
+<div class="grid">
+<div class="card"><div class="num">INPUT</div><h3>Audio Engine</h3><p>Отримує master/monitor audio та стабільно передає його в аналіз без прив'язки до конкретного світлового софту.</p></div>
+<div class="card"><div class="num">ANALYSIS</div><h3>Music Features</h3><p>Low / mid / high energy, envelope, transients, beat, BPM, загальна energy; пізніше — downbeat, build, drop, break.</p></div>
+<div class="card"><div class="num">CONTROL</div><h3>Mapping Engine</h3><p>Перетворює музичні параметри на керуючі значення. Тут народжується власне «мова» реактивного світла.</p></div>
+<div class="card"><div class="num">BEHAVIOUR</div><h3>Modulators</h3><p>Attack, release, threshold, curves, smoothing, pulse, wave, noise, chase, random walk та комбінації сигналів.</p></div>
+<div class="card"><div class="num">OUTPUT</div><h3>Lighting Bridge</h3><p>Видає керування через Art-Net / DMX і може працювати поруч із QLC або MagicQ, а не замінювати їх.</p></div>
+<div class="card"><div class="num">INTERFACE</div><h3>Playground</h3><p>Живі meters, параметри й mappings, щоб змінювати поведінку та одразу бачити результат на реальному світлі.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">03 / Приклад</div><h2>Музика стає набором сигналів</h2>
+<div class="grid">
+<div class="card wide"><span class="module">LOW ENERGY</span><div class="meter"><i style="width:84%"></i></div><span class="module">HIGH ENERGY</span><div class="meter"><i style="width:61%"></i></div><span class="module">TOTAL ENERGY</span><div class="meter"><i style="width:76%"></i></div><p>BPM 137 · BEAT ● · TRANSIENT HIGH</p></div>
+<div class="card wide"><div class="module">MAPPING</div><h3>LOW → Group A / Dimmer</h3><p>Attack 40 ms · Release 420 ms · Curve soft</p><h3>ENERGY → Movement scale</h3><p>Мало енергії — компактний рух. Більше енергії — система поступово відкривається.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">04 / Як будемо розробляти</div><h2>Від одного правила — до інструмента.</h2>
+<p class="intro">Не треба спочатку вчити програмування. Кожне нове поняття з'являється тоді, коли воно потрібне для конкретної творчої задачі.</p>
+<div class="steps">
+<div class="step"><div><b>Описуємо поведінку</b><span>«Хочу, щоб цей прожектор реагував на бас плавно, але ігнорував слабкі удари».</span></div></div>
+<div class="step"><div><b>Розкладаємо її на алгоритм</b><span>Разом з агентом визначаємо input, threshold, envelope, attack/release, mapping та output.</span></div></div>
+<div class="step"><div><b>Агент допомагає реалізувати</b><span>Пише механічну частину коду, тести, пояснення та допомагає з debugging.</span></div></div>
+<div class="step"><div><b>Перевіряємо на світлі</b><span>Не оцінюємо код заради коду — дивимося, чи працює задум у просторі.</span></div></div>
+<div class="step"><div><b>Коригуємо мовою художника</b><span>«Повільніше», «різкіше», «не так буквально», «нехай накопичує напругу» — і переводимо це в параметри.</span></div></div>
+<div class="step"><div><b>Фіксуємо як готовий модуль</b><span>Агент автоматично оновлює зрозумілу документацію: що це, як працює, які параметри має і як використати знову.</span></div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">05 / Перший прототип</div><h2>Навмисно маленький.</h2>
+<p class="intro">Перша мета — не «розумна світлова система». Перша мета: один аудіосигнал, один алгоритм, один mapping і один реальний світловий прилад, поведінка якого нам подобається.</p>
+<div class="flow"><div class="node">Audio Input</div><div class="arrow">→</div><div class="node">Low / Mid / High</div><div class="arrow">→</div><div class="node">Smoothing</div><div class="arrow">→</div><div class="node">Mapping</div><div class="arrow">→</div><div class="node">Art-Net</div></div>
+<div class="grid">
+<div class="card"><div class="num">STEP 1</div><h3>Один канал</h3><p>Навчитися стабільно отримувати керуюче значення з музики.</p></div>
+<div class="card"><div class="num">STEP 2</div><h3>Один прилад</h3><p>Передати це значення через Art-Net та побачити фізичну реакцію.</p></div>
+<div class="card"><div class="num">STEP 3</div><h3>Зробити красиво</h3><p>Саме тут починається головна робота: не «чи працює», а «як повинно поводитися».</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">06 / Ролі</div><h2>Код — не центр цієї системи.</h2>
+<div class="grid">
+<div class="card wide"><h3>Ксенія — автор поведінки</h3><p>Світло, композиція, простір, mapping, рух, відчуття музики. Вона визначає, що система повинна робити і що виглядає правильно.</p></div>
+<div class="card wide"><h3>Віктор — технічний провідник</h3><p>Створює середовище, тримає архітектуру, допомагає перекладати творчі правила в технічні задачі та вводить у новий інструментарій.</p></div>
+<div class="card wide"><h3>AI-агент — скорочувач шляху</h3><p>Код, рефакторинг, debugging, тести, пояснення, документація та перетворення маленьких сформульованих задач на працюючі модулі.</p></div>
+<div class="card wide"><h3>Система — накопичений досвід</h3><p>Кожен створений алгоритм лишається модулем із документацією. З часом нові сетапи збираються з уже зрозумілих будівельних блоків.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="eyebrow">07 / Куди це росте</div><h2>Модульний синтезатор для світла.</h2>
+<p class="intro">Коли базові блоки стануть стабільними, їх можна комбінувати: музичні features → modulators → правила → групи світла. Не набір жорстко записаних сцен, а середовище для створення власних реактивних систем.</p>
+<p class="quote"><em>Творча ідея → правило → алгоритм → світло.</em><br>Технічна відстань між цими кроками має ставати дедалі меншою.</p>
+</section>
+
+<div class="footer">Reactive Light · working vision · v0.1</div>
+</main></body></html>
