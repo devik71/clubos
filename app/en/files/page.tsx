@@ -1,0 +1,8 @@
+﻿import Link from 'next/link';
+import { Archive } from '../../../components/pipeline';
+import { PageIntro, SiteFooter, SiteHeader } from '../../../components/site-shell';
+
+export const metadata = { title: 'Archive — Files with shared memory' };
+export default function EnglishFilesPage() {
+  return <><SiteHeader current="files" locale="en" /><main><PageIntro label="03 / FILE MANAGEMENT" title={<>The files are here.<br /><span className="muted">Now the links are, too.</span></>} text="Years of recordings, projects, and renders. Garbage Genie restores their context, while the ongoing Archivist keeps new material from falling back into chaos." /><section className="wrap route-demo"><Archive locale="en" /></section><section className="section wrap"><div className="hub-principles"><div><span>01 / INDEX</span><h3>Find and understand.</h3><p>Folders, names, dates, metadata, RAW files, renders, duplicates, projects, and event history. First, an index only.</p></div><div><span>02 / VERIFY</span><h3>Check the connections.</h3><p>A person confirms which event and artist each item belongs to. Uncertain matches remain for review.</p></div><div><span>03 / REORGANIZE</span><h3>Keep things organized.</h3><p>An approved plan structures the archive. New recordings receive context, versions, and delivery status from the start.</p></div></div><p className="principle-line">An unknown file is not a disposable file.</p><div className="hub-cta"><Link className="primary-button" href="/en/media#pipeline">Where new recordings come from <span>↗</span></Link><Link className="text-button" href="/en/team#start-together">Take on a small archive task →</Link></div></section></main><SiteFooter locale="en" /></>;
+}
