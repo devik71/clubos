@@ -4,7 +4,7 @@ export type SiteLocale = 'uk' | 'en';
 const sections = [
   ['/', 'vision', 'Візія', 'Vision'], ['/light', 'light', 'Світло', 'Light'],
   ['/media', 'media', 'Медіа', 'Media'], ['/files', 'files', 'Архів', 'Archive'],
-  ['/team', 'team', 'Команда', 'People'], ['/start', 'start', 'Почати', 'Start'],
+  ['/team', 'team', 'Команда', 'People'],
 ] as const;
 export const localizedHref = (href: string, locale: SiteLocale) => locale === 'en' ? `/en${href === '/' ? '' : href}` : href;
 

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ClubOS — роадмап команди</title>
+  <meta name="description" content="Робочий роадмап ClubOS: від візії та демо до перевіреного MVP і модулів для майданчиків.">
+  <style>
+    :root{font-family:Arial,Helvetica,sans-serif;color:#202320;background:#f6f7f3;font-synthesis:none;line-height:1.55}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}a:focus-visible{outline:2px solid #32452e;outline-offset:5px}p,h1,h2,h3{margin:0}p{max-width:72ch}h1,h2,h3{font-weight:500;letter-spacing:-.045em;line-height:1.12}h1{font-size:clamp(3.2rem,8vw,7.2rem)}h2{font-size:clamp(2rem,4.4vw,3.7rem)}h3{font-size:1.35rem}.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.muted{color:#626b61}.top{border-bottom:1px solid #d8ddd5;background:#fff}.top .wrap{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font-size:1.1rem;font-weight:700;letter-spacing:-.05em}.top-note{font-size:.72rem;color:#687167;text-align:right}.hero{padding:86px 0 98px}.hero .eyebrow{color:#526b48}.hero h1{max-width:900px;margin:24px 0}.hero h1 span{color:#72836b}.hero-lead{font-size:clamp(1.06rem,1.9vw,1.35rem);max-width:650px}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:42px}.hero-meta span{font-size:.75rem;padding:9px 12px;border:1px solid #d8ddd5;border-radius:5px;background:#fff}.section{padding:84px 0;border-top:1px solid #d8ddd5}.section-head{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end;margin-bottom:36px}.section-head p{color:#5d675b;font-size:.95rem}.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stage{background:#fff;border:1px solid #d8ddd5;border-radius:12px;padding:25px 22px;display:flex;flex-direction:column;min-height:330px}.stage:first-child{background:#233526;color:#f4f7f1;border-color:#233526}.stage .number{font-size:.7rem;letter-spacing:.1em;margin-bottom:28px;color:#71846e}.stage:first-child .number{color:#b7cbb1}.stage h3{margin-bottom:17px}.stage p{font-size:.88rem;line-height:1.6}.stage .gate{border-top:1px solid currentColor;opacity:.72;margin-top:auto;padding-top:18px;font-size:.75rem}.flow{margin-top:16px;padding:20px 24px;background:#e9eee6;border-radius:9px;font-size:clamp(.95rem,1.7vw,1.15rem);letter-spacing:-.015em}.note{margin-top:22px;padding:18px 22px;border-left:3px solid #71846e;background:#fff;color:#485246;font-size:.88rem}.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;counter-reset:steps;list-style:none;padding:0;margin:0}.list li{counter-increment:steps;background:#fff;border:1px solid #d8ddd5;border-radius:10px;padding:22px 24px;font-size:.91rem}.list li:before{content:counter(steps,decimal-leading-zero);display:block;color:#6a8066;font-size:.7rem;letter-spacing:.1em;margin-bottom:15px}.list strong{display:block;font-size:1.08rem;font-weight:600;margin-bottom:8px}.modules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.module{padding:24px;background:#fff;border:1px solid #d8ddd5;border-radius:10px}.module h3{margin-bottom:12px}.module p{font-size:.88rem;color:#536051}.governance{background:#18221a;color:#ecf2e9}.governance .section-head p{color:#b4c3b0}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#526052;border:1px solid #526052}.fact{padding:23px 25px;background:#213024}.fact span{display:block;color:#a8bda2;font-size:.68rem;letter-spacing:.1em;margin-bottom:12px}.fact p{font-size:.9rem}.open{margin:0;padding-left:22px;display:grid;gap:16px;max-width:850px}.open li{padding-left:10px}.open strong{display:block}.closing{padding:42px 0 56px;border-top:1px solid #d8ddd5;color:#687167;font-size:.75rem}.closing .wrap{display:flex;justify-content:space-between;gap:25px}.closing p{max-width:700px}
+    @media(max-width:850px){.stages{grid-template-columns:repeat(2,minmax(0,1fr))}.modules{grid-template-columns:repeat(2,minmax(0,1fr))}.section-head{grid-template-columns:1fr;gap:16px}.stage{min-height:290px}}
+    @media(max-width:560px){.wrap{width:calc(100% - 36px)}.hero{padding:62px 0 70px}.section{padding:62px 0}.stages,.list,.modules,.facts{grid-template-columns:1fr}.stage{min-height:0}.stage .gate{margin-top:26px}.top-note{max-width:160px}.closing .wrap{display:block}.closing p+p{margin-top:14px}}
+    @media print{html{background:#fff}.top{display:none}.hero{padding:25px 0}.section{padding:25px 0}.stage,.module,.list li{break-inside:avoid}.governance{background:#fff;color:#202320}.governance .section-head p{color:#5d675b}.facts{background:#ddd}.fact{background:#fff;color:#202320}.fact span{color:#5d675b}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><a class="brand" href="/">ClubOS / BRUKXT</a><span class="top-note">ВНУТРІШНЯ ЧЕРНЕТКА · 24.09.2026</span></div></header>
+  <main>
+    <section class="hero wrap" aria-labelledby="title">
+      <span class="eyebrow">Шлях від бачення до продукту</span>
+      <h1 id="title">Роадмап <span>ClubOS.</span></h1>
+      <p class="hero-lead">Спочатку показуємо візію й демо. Далі перевіряємо один реальний операційний сценарій, підключаємо дані та розвиваємо модулі, які довели свою користь.</p>
+      <div class="hero-meta"><span>Партнерська зустріч: 2 жовтня</span><span>Формат: візія + демо + роадмап</span><span>MVP: межі ще узгоджуються</span></div>
+    </section>
+
+    <section class="section" aria-labelledby="route-title"><div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">01 / Один погляд</span><h2 id="route-title">Чотири етапи.</h2></div><p>Етапи показують послідовність і критерій переходу, а не обіцяні дати запуску функцій.</p></div>
+      <div class="stages">
+        <article class="stage"><span class="number">01 / ЗАРАЗ</span><h3>Візія для партнерів</h3><p>Англомовна презентація, сайт-візитка, демо та цей роадмап. Кожна демонстрація чітко позначена як демо.</p><p class="gate">Перехід: співзасновники голосуванням погодили матеріали до показу.</p></article>
+        <article class="stage"><span class="number">02 / MVP</span><h3>Один реальний сценарій</h3><p>Кандидат: подія й артист → готовність запису → дія через OBS → перевірений стан → історія та передача матеріалу під наглядом людини.</p><p class="gate">Перехід: сценарій пройшов на реальній події, включно з відмовою та ручним втручанням.</p></article>
+        <article class="stage"><span class="number">03 / ОПЕРАЦІЇ</span><h3>Модулі на фактах</h3><p>Poster/POS, задачі та зміни, склад і закупівлі, прості звіти. Підключаємо по одному джерелу й перевіряємо користь.</p><p class="gate">Перехід: у модуля є власник, надійне джерело даних і вимірюваний результат.</p></article>
+        <article class="stage"><span class="number">04 / МАСШТАБ</span><h3>Прогнози та інші майданчики</h3><p>Події, артисти, персонал і запаси; рольовий AI-помічник та модульне підключення для інших просторів.</p><p class="gate">Перехід: прогноз перевірено на історії, а права, аудит і модель продажу визначено.</p></article>
+      </div>
+      <div class="flow">Візія <span aria-hidden="true">→</span> перевірений MVP <span aria-hidden="true">→</span> модулі на даних <span aria-hidden="true">→</span> продукт для інших майданчиків</div>
+      <p class="note"><strong>Статус MVP:</strong> склад першого сценарію ще не затверджено. Сценарій із записом — пропозиція на основі чинного технічного плану, а не зафіксоване рішення команди.</p>
+    </div></section>
+
+    <section class="section" aria-labelledby="work-title"><div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">02 / Наступна робота</span><h2 id="work-title">Від презентації до перевірки.</h2></div><p>Кожен наступний крок має дати спостережуваний результат. Наявний сайт показує концепцію та браузерні демонстрації; він ще не підтверджує підключення до обладнання.</p></div>
+      <ol class="list">
+        <li><strong>Підготувати показ 2 жовтня</strong>Перевірити англійський текст, демо й формулювання роадмапу. Відокремити те, що вже працює, від задуму. Внутрішній маршрут встановлення агента не є частиною головної сторінки.</li>
+        <li><strong>Окреслити MVP</strong>Визначити першого щоденного користувача, його проблему, один наскрізний сценарій, власника й критерій успіху.</li>
+        <li><strong>Дослідити аналоги</strong>Зробити швидкий зріз зараз і докладний огляд за напрямами до листопада: Poster, ClickUp/Notion, CRM та профільні інструменти.</li>
+        <li><strong>Перевірити перший сценарій</strong>Побудувати структуру даних, права, журнал дій, планувальник, OBS-адаптер та незалежну перевірку результату. Ви ведете розробку; Микола адаптує джерела й інтеграції разом із вами.</li>
+        <li><strong>Підключити фактичні дані</strong>Почати з одного корисного джерела; кандидат — читання Poster/POS для продажів і залишків. Автоматичні закупівлі та списання потребують підтвердження людини.</li>
+        <li><strong>Виміряти прогнози</strong>Лише після накопичення якісних даних порівняти прогноз відвідуваності або успішності події з простим історичним базовим варіантом.</li>
+      </ol>
+    </div></section>
+
+    <section class="section" aria-labelledby="modules-title"><div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">03 / Напрями розвитку</span><h2 id="modules-title">Розширювати за потребою.</h2></div><p>Ці ідеї мають різну зрілість. Вони не входять автоматично до першого MVP.</p></div>
+      <div class="modules">
+        <article class="module"><h3>Команда та задачі</h3><p>Відповідальні, зміни та виклики на роботу. Сьогодні команда має ClickUp, Google Sheets і Telegram; раніше використовувала Asana.</p></article>
+        <article class="module"><h3>Медіа й архів</h3><p>Передача матеріалу артисту, архів із перевіреними метаданими, пізніше — допомога з монтажем на власному датасеті.</p></article>
+        <article class="module"><h3>Світло</h3><p>Художні параметри та контроль оператора. Автоматичне складання сцен — після перевірки на реальному майданчику.</p></article>
+        <article class="module"><h3>Аналітика</h3><p>Прогнози подій і рейтинг артистів з урахуванням погодних та міських факторів, з перевіркою точності.</p></article>
+        <article class="module"><h3>Безпека простору</h3><p>Права доступу потрібні з першого реального сценарію. Антифрод, датчики та теплокарти — окремі дослідження.</p></article>
+        <article class="module"><h3>Інші майданчики</h3><p>Модульне підключення та можлива підписка для клубів, барів і концертних просторів після перевірки на власному кейсі.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section governance" aria-labelledby="team-title"><div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">04 / Команда і рішення</span><h2 id="team-title">Як рухаємося разом.</h2></div><p>Ролі в інтеграції визначені. Доступ до даних і рішення про зовнішнє поширення лишаються під контролем команди.</p></div>
+      <div class="facts">
+        <div class="fact"><span>РОЗРОБКА</span><p>Ви ведете розробку. Микола разом із вами адаптує джерела даних та інтеграції.</p></div>
+        <div class="fact"><span>ДОСТУПИ</span><p>Співзасновники мають доступи у своїх напрямах. Микола має адміністративні доступи та операційний контекст Poster й інших джерел.</p></div>
+        <div class="fact"><span>РОБОЧІ ІНСТРУМЕНТИ</span><p>ClickUp, Google Sheets та командний Telegram-чат; Asana використовувалася раніше. Новий трекер не є передумовою MVP.</p></div>
+        <div class="fact"><span>ПОШИРЕННЯ</span><p>Співзасновники голосуванням вирішують, які внутрішні ідеї та матеріали можна показувати партнерам.</p></div>
+      </div>
+    </div></section>
+
+    <section class="section" aria-labelledby="open-title"><div class="wrap">
+      <div class="section-head"><div><span class="eyebrow">05 / Відкриті питання</span><h2 id="open-title">Що потрібно вирішити для MVP.</h2></div><p>Виконавці інтеграції вже визначені. Перший користувач і межі першої функції — ще ні.</p></div>
+      <ul class="open">
+        <li><strong>Перший користувач і сценарій.</strong>Для кого робимо щоденну роботу першою: медіакоманди, директора/букінгу чи бару?</li>
+        <li><strong>Межі підключень.</strong>Які саме акаунти, API та дозволи використовуємо для Poster, архіву, розкладу й OBS; де читання, а де запис?</li>
+        <li><strong>Критерій успіху.</strong>Яка одна перевірена дія та вимірювана користь покажуть, що MVP допомагає команді?</li>
+      </ul>
+      <p class="note">Джерело: командне обговорення 16–24 вересня 2026 року та чинний технічний план ClubOS. Експорт чату не містив вкладені <code>clubos.html</code>, <code>BRUKXT_NFC_PRESENTATION_FINAL_2026-09-20.pdf</code> і <code>BRUKXT_Scout_MVP_presentation.pptx</code>; остання презентація може уточнювати межі MVP.</p>
+    </div></section>
+  </main>
+  <footer class="closing"><div class="wrap"><p>ClubOS / BRUKXT · Робоча чернетка. До рішення співзасновників не поширювати поза командою.</p><p>24 вересня 2026</p></div></footer>
+</body>
+</html>
